@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Assessment Practice</h1>
+
+</body>
+
+<script>
+
+
+    var students = [
+        {
+            name: "Sherma'n",
+            average: 95
+        },
+        {
+            name: "Ry",
+            average: 50
+        }
+    ];
+
+
+    function getGrades(arrayOfObjects) {
+        var grades = [];
+
+        arrayOfObjects.forEach(function (student) {
+            grades.push(student.average);
+        });
+
+        return grades;
+    }
+
+
+    // console.log(getGrades(students));
+
+    function getClassAverage(arrayOfStudents) {
+
+        var total = 0;
+
+        arrayOfStudents.forEach(function (student) {
+            total += student.average;
+        });
+
+        console.log(total);
+
+        return total / arrayOfStudents.length;
+    }
+
+    console.log(getClassAverage(students));
+
+
+    function isVowel(x) {
+        x = x.toLowerCase();
+        var vowelList = "aeiou";
+        return vowelList.indexOf(x) !== -1;
+
+    }
+
+    function remove9s(arr) {
+        // var splitString = str.split('');
+        var finalResult = [];
+        arr.forEach(function (number) {
+            if(number !== 9) {
+                finalResult.push(number);
+            }
+        });
+
+        return finalResult;
+    }
+
+    console.log(remove9s([12, 5, 9, 8, 7, 8, 9]));
+
+    console.log()
+
+
+</script>
+
+</html>
